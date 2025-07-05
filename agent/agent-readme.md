@@ -5,46 +5,26 @@
 
 To begin working with ACP, follow these installation and setup steps:
 
-## Installation
+## Installation of dependecies
 
-First, you'll need to install `uv`, a Python package installer, and then use it to install the ACP SDK.
+`pip3 install -r requirements.txt`
 
-### Install `uv`
+## Provide GEMINI API KEY at environment variable
 
-Bash
+use env.example at root
 
-```
-pip3 install uv
-
-```
-
-### Install ACP
-
-Bash
-
-```
-uv add acp-sdk
-
-```
-
-----------
+provide value of 'GOOGLE_GEMINI_API_KEY'
 
 ## Running the ACP Server
 
-Once ACP is installed, you can start the server using `uv`.
-
-Bash
-
-```
-uv run agent.py
-
-```
 
 ----------
 
-## Creating a Simple ACP Server with Two Agents
+## Creating a Simple ACP Server with Mulitple Agents '/agent.py'
 
-This example demonstrates how to set up an ACP server with two distinct agents: `Echo_Agent` and `Do_Nothing_Agent`.
+This example demonstrates how to set up an Agent Communication Protocol server with multiple agents
+
+For example `Echo_Agent` and `Do_Nothing_Agent`.
 
 ### Echo_Agent
 
@@ -73,6 +53,15 @@ This example demonstrates how to set up an ACP server with two distinct agents: 
     
 
 ----------
+
+
+Once you have agent.py and all dependencies are installed, you can start the server using .
+
+
+```
+uv run agent.py
+
+```
 
 ## Usage
 
@@ -176,7 +165,7 @@ async def stream_execution(agent_name:str) -> None:
 
 ----------
 
-### Run the Agent via HTTP
+### Run the Agent via HTTP (Follow the instructions provided at '/forntend')
 
 You can also interact with your ACP agents directly using HTTP requests. Here's an example of how to make a `POST` request to the `/runs` endpoint:
 

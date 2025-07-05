@@ -1,8 +1,3 @@
-
-Here's the re-written and beautifully formatted `README.md` based on your corrected version, including the proxy configuration details.
-
-----------
-
 # 🚀 Chat UI for ACP Agents
 
 A modern, intuitive chat interface built with **React** and **Vite**, designed to facilitate seamless interaction with various AI agents powered by the **Agent Communication Protocol (ACP)**. This frontend application connects to a REST API to efficiently manage and communicate with your AI agents.
@@ -58,19 +53,9 @@ Before you begin, make sure you have the following installed on your system:
 
 ### Installation
 
-1.  **Clone the repository:**
+
     
-    Bash
-    
-    ```
-    git clone https://github.com/Shivvam/agent-communication-protocol
-    cd frontend
-    
-    ```
-    
-    _This command will clone the main repository and navigate into the `frontend` directory where this UI resides._
-    
-2.  **Install dependencies:**
+1.  **Install dependencies:**
     
     Bash
     
@@ -138,10 +123,3 @@ server: {
 
 This configuration ensures that any requests made by the frontend to `/api` will be transparently forwarded to your backend API running at `http://127.0.0.1:8000`, effectively bypassing common CORS restrictions.
 
-----------
-
-## 🤝 Contributing
-
-We welcome contributions! If you have suggestions for improvements, find a bug, or want to add a new feature, please feel free to open an issue or submit a pull request. Your contributions help make this project better for everyone.
-
-----------

@@ -28,9 +28,20 @@ ACP directly addresses the "MxN problem," a common challenge where agents, AI co
 
 Experience the power of ACP firsthand with our full-stack application, showcasing AI agents in action.
 
+
+#### Create Virtual Environment
+
+`python3 -m venv acp-venv`  // we've used name 'acp-venv', you can choose your own name of virtual environment
+
+#### Activate Virtual Environment
+
+- For MAC : .....
+- For  Linux : ....
+- For Windows : .\acp-venv\Scripts\activate 
+
 #### Backend
 
-Begin your exploration by navigating to the `/agent-01` directory and following the comprehensive instructions detailed in the `agent-readme` file.
+Navigating to the `/agent` directory and follow the comprehensive instructions detailed in the `agent-readme.md` file.
 
 #### Front End
 
