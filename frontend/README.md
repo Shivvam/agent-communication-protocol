@@ -1,125 +1,49 @@
 # 🚀 Chat UI for ACP Agents
 
-A modern, intuitive chat interface built with **React** and **Vite**, designed to facilitate seamless interaction with various AI agents powered by the **Agent Communication Protocol (ACP)**. This frontend application connects to a REST API to efficiently manage and communicate with your AI agents.
+This is a modern chat interface built with **React** and **Vite**, designed for seamless interaction with AI agents that use the **Agent Communication Protocol (ACP)**. The application connects to a backend REST API to dynamically fetch and communicate with your agents.
 
-----------
+-----
 
-## ✨ Features
+## 🛠️ Core Technologies
 
--   **Intelligent Agent Interaction:** Engage with AI agents that adhere to the ACP standard for structured communication.
-    
--   **Dynamic Agent Listing:** Fetches and displays a real-time list of available AI agents from a backend REST API, ensuring you always see the latest agents.
-    
--   **Agent Execution:** Effortlessly run selected AI agents and view their responses directly within a clean, user-friendly chat interface.
-    
--   **Responsive Design:** Optimized for a smooth and consistent user experience across various devices, from desktops to mobile phones.
-    
--   **Fast Development Experience:** Leverages Vite for blazing-fast cold starts and hot module reloading, making development quick and enjoyable.
-    
+  * **Frontend**: A dynamic and interactive UI built with **React**, **Vite**, and styled with **TailwindCSS**.
+  * **Communication**: Integrates with a backend via a **RESTful API** and utilizes the **Agent Communication Protocol (ACP)** for standardized agent interaction.
 
-----------
-
-## 🛠️ Technologies Used
-
--   ### Frontend
-    
-    -   **[React](https://react.dev/)**: A powerful JavaScript library for building dynamic and interactive user interfaces.
-        
-    -   **[Vite](https://vitejs.dev/)**: Next-generation frontend tooling that provides an incredibly fast development environment.
-        
-    -   **TailwindCSS**: For styling the Chat UI.
-        
--   ### Communication
-    
-    -   **RESTful API Integration**: Handles seamless communication with the backend service.
-        
-    -   **Agent Communication Protocol (ACP)**: The core protocol enabling standardized interaction with diverse AI agents.
-        
-
-----------
+-----
 
 ## 🚀 Getting Started
 
-Follow these simple steps to get your local development environment up and running.
+Follow these steps to set up and run the project locally.
 
 ### Prerequisites
 
-Before you begin, make sure you have the following installed on your system:
+Ensure you have the latest LTS version of **Node.js** and **npm** installed on your system.
 
--   **[Node.js](https://nodejs.org/en/)**: The LTS (Long Term Support) version is recommended.
-    
--   **[npm](https://www.npmjs.com/)**: Node Package Manager, which typically comes bundled with Node.js.
-    
+### Installation & Setup
 
-### Installation
+1.  **Install Dependencies**: Open your terminal, navigate to the project directory, and run:
 
-
-    
-1.  **Install dependencies:**
-    
-    Bash
-    
-    ```
+    ```bash
     npm install
-    
     ```
-    
-    _This command will install all the necessary project dependencies listed in `package.json`._
-    
 
-### Running the Development Server
+    This command installs all the required dependencies listed in `package.json`.
 
-Once the dependencies are installed, you can start the development server:
+2.  **Run the Development Server**: Once the installation is complete, start the Vite development server:
 
-Bash
+    ```bash
+    npm run dev
+    ```
 
-```
-npm run dev
+3.  **Visit the Application**: After the server starts, open your web browser and go to **`http://localhost:5173`**. You should now see the chat UI, ready to interact with your agents.
 
-```
+-----
 
-_This command will compile the project and launch the Vite development server._
+## 🔌 API and Proxy Configuration
 
-### 🌐 Visit the Application
+The application requires a running backend service to function. It communicates with two primary endpoints:
 
-After running `npm run dev`, open your web browser and navigate to:
+  * **`GET /agents`**: Retrieves the list of all available AI agents.
+  * **`POST /runs`**: Executes a selected agent with a specific input.
 
-[http://localhost:5173/](https://www.google.com/search?q=http://localhost:5173/)
-
-You should now see the chat UI, ready to connect and interact with your AI agents!
-
-----------
-
-## 🔌 API Endpoints & Proxy Configuration
-
-This frontend application relies on a backend REST API for its core functionality. Ensure your backend service is running and accessible. The frontend interacts with the following assumed API endpoints:
-
--   **`GET /agents`**: Used to retrieve a comprehensive list of all available AI agents.
-    
--   **`POST /runs`**: Used to execute a selected AI agent by sending specific inputs. (Details on the exact request body and expected response will depend on your specific ACP implementation.)
-    
-
-### Avoiding CORS Errors
-
-To prevent Cross-Origin Resource Sharing (CORS) issues when interacting with your backend API, a proxy has been configured in the `vite.config.js` file:
-
-JavaScript
-
-```
-// vite.config.js snippet
-server: {
-  proxy: {
-    // Proxy requests from '/api' to your backend API
-    '/api': {
-      target: 'http://127.0.0.1:8000', // Your Python backend API URL
-      changeOrigin: true, // Needed for virtual hosted sites
-      rewrite: (path) => path.replace(/^\/api/, ''), // Remove '/api' prefix when forwarding
-      // ws: true, // Uncomment if your backend uses WebSockets
-    },
-  },
-},
-
-```
-
-This configuration ensures that any requests made by the frontend to `/api` will be transparently forwarded to your backend API running at `http://127.0.0.1:8000`, effectively bypassing common CORS restrictions.
-
+To avoid Cross-Origin Resource Sharing (CORS) errors during development, this project uses a proxy. As configured in `vite.config.js`, any request made to `/api` from the frontend is automatically forwarded to the backend service at `http://127.0.0.1:8000`.

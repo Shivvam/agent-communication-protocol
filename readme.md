@@ -1,48 +1,53 @@
 
-----------
+## Agent Communication Protocol (ACP): Powering Seamless AI Interoperability
 
-## Agent Communication Protocol (ACP): Enabling Seamless AI Interoperability
+The **Agent Communication Protocol (ACP)** is an open-source, REST API-based protocol engineered by IBM to standardize interactions between AI agents, applications, and human users. In a landscape where AI components are often siloed within diverse frameworks, ACP delivers a unified solution for genuine interoperability.
 
-The **Agent Communication Protocol (ACP)**, an **open-source, REST API-based protocol** developed by IBM, revolutionizes how **AI agents, AI applications, and humans** interact. In an increasingly complex AI landscape where agents are often developed in isolation across diverse frameworks and infrastructures, ACP provides a standardized solution for true interoperability.
+By establishing a standardized RESTful API, ACP enables agents to communicate and collaborate effortlessly, regardless of their underlying implementation. This eliminates common integration barriers and fosters a cohesive and scalable AI ecosystem.
 
-By establishing a **standardized RESTful API**, ACP allows agents to communicate effortlessly, regardless of their internal implementations. This standardization fosters **seamless collaboration** and eliminates the barriers that typically hinder effective AI ecosystem development.
+-----
 
-----------
+### Core Advantages of ACP
 
-### Key Benefits of ACP
+ACP is architected to solve the "M x N problem," where integrating multiple agents, tools, and components becomes exponentially complex. While traditional point-to-point integrations fail to scale, ACP's RESTful design provides a robust and scalable foundation. The protocol is also built to be **async-first with sync support**, making it ideal for managing long-running agent tasks efficiently.
 
-ACP directly addresses the "MxN problem," a common challenge where agents, AI components, and (MCP) tools are developed in disparate systems, each with unique integration patterns. While traditional point-to-point integrations struggle to scale, **RESTful systems excel**, making ACP a highly scalable and robust solution.
+#### Why Adopt ACP?
 
-#### Why Choose ACP?
+  * **Flexible Agent Replacement**: Maintain system stability even when swapping underlying agents. The standardized REST API endpoint ensures that internal agent modifications do not disrupt the broader system.
+  * **Multi-Agent Collaboration**: Construct sophisticated AI systems by enabling specialized agents to work together as coordinated and highly effective teams.
+  * **Cross-Platform Integration**: Break down technology silos by seamlessly connecting agents across your entire stack, thereby maximizing the utility of your AI assets.
 
--   **Flexible Agent Replacement**: Enjoy system stability even when underlying agents change. The consistent REST API endpoint ensures that modifications to an agent's internal workings do not disrupt the broader system.
-    
--   **Multi-Agent Collaboration**: Build sophisticated AI systems where specialized agents can work together as coordinated, highly effective teams.
-    
--   **Cross-Platform Integration**: Connect agents seamlessly across your entire technology stack, breaking down silos and maximizing the utility of your AI assets.
-- ACP is designed to be **async-first, with sync support**, primarily built for asynchronous communication. This architecture is crucial for effectively handling long-running agent tasks, ensuring responsiveness and efficiency.
-
-----------
+-----
 
 ### Getting Started with ACP
 
-Experience the power of ACP firsthand with our full-stack application, showcasing AI agents in action.
+You can experience the power of ACP firsthand by setting up our full-stack sample application, which showcases AI agents in action.
 
+#### 1\. Create a Virtual Environment
 
-#### Create Virtual Environment
+First, create a dedicated Python virtual environment. While we use `acp-venv` in this example, you are free to choose your own name.
 
-`python3 -m venv acp-venv`  // we've used name 'acp-venv', you can choose your own name of virtual environment
+```bash
+python3 -m venv acp-venv
+```
 
-#### Activate Virtual Environment
+#### 2\. Activate the Virtual Environment
 
-- For MAC : .....
-- For  Linux : ....
-- For Windows : .\acp-venv\Scripts\activate 
+Next, activate the newly created environment based on your operating system:
 
-#### Backend
+  * **macOS / Linux**:
+    ```bash
+    source acp-venv/bin/activate
+    ```
+  * **Windows**:
+    ```powershell
+    .\acp-venv\Scripts\activate
+    ```
 
-Navigating to the `/agent` directory and follow the comprehensive instructions detailed in the `agent-readme.md` file.
+#### 3\. Set Up the Backend
 
-#### Front End
+Navigate to the `/agent` directory and follow the comprehensive instructions detailed in the `agent-readme.md` file to configure the backend.
 
-For the user interface, navigate to the `/frontend` directory and follow the instructions provided in `readme.md`.
+#### 4\. Set Up the Frontend
+
+For the user interface, navigate to the `/frontend` directory and follow the setup instructions provided in its `readme.md` file.
